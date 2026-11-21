@@ -158,16 +158,16 @@ function renderCart() {
 productList.addEventListener("click", (event) => {
    // Step 1: Check if the clicked element has the class "add-btn"
 
-  
-  
+  if (event.target.classList.contains("add-btn")) {
+    const productName = event.target.dataset.name;
   
     // Step 2: If it does, read the product name from data-name and push it into the cart array
-
+    cart.push(productName);
 
     // Step 3: Call renderCart() to update the cart display
-    
+    renderCart();
 } 
-);
+});
 
 
 
